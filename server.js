@@ -27,7 +27,10 @@ app.listen(9000)
 const db = require('./config/keys').mongoURI
 
 mongoose
-  .connect(db, { useNewUrlParser: true })
+  .connect(
+    'mongodb+srv://ashishmaner:NULY2axn58HdSwZZ@cluster0.za3ivol.mongodb.net/user?retryWrites=true&w=majority',
+    { useNewUrlParser: true, useUnifiedTopology: true },
+  )
   .then(() => console.log('MongoDB successfully connected.'))
   .catch((err) => console.log(err))
 
