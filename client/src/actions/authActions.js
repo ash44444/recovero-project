@@ -9,7 +9,7 @@ import {
 
 export const registerUser = (userData, history) => dispatch => {
     axios
-        .post("/api/user-add", userData)
+        .post("/api/register", userData)
         .then(res => history.push("/login"))
         .catch(err =>
             dispatch({
